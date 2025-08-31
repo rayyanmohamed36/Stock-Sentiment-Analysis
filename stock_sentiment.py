@@ -17,14 +17,6 @@ def clean_text(text):
     text = re.sub(r'[^a-zA-Z\s]', '', str(text))  # remove non-letters
     return text.lower()
 
-df['Combined'] = df.iloc[:, 2:27].apply(lambda row: ' '.join(row.values.astype(str)), axis=1)
-df['Combined'] = df['Combined'].apply(clean_text)
-
-df['Sentiment'] = df['Combined'].apply(
-    lambda x: analyzer.polarity_scores(x)['compound'] if x.strip() else 0
-)
-
-
 # Combine all 25 headlines into one string per day
 df['Combined'] = df.iloc[:, 2:27].apply(lambda row: ' '.join(row.values.astype(str)), axis=1)
 df['Combined'] = df['Combined'].apply(clean_text)
