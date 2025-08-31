@@ -31,7 +31,7 @@ This project investigates the relationship between **financial news sentiment** 
 
 Scatter plot showing **Daily Average Sentiment vs. Dow Jones Daily Returns**:
 
-![Sentiment vs Returns](example_plot.png)
+![Sentiment vs Returns](plot.png)
 
 ## Insights
 
